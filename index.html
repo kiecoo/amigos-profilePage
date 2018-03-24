@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/npm-require"></script>
+    <script> var module = {} </script>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <script>
+   
+   
+var bel = require('bel')
+var csjs = require('csjs-inject')
+
+  
+  
+// CSS-- just a example
+var css = csjs`
+
+
+      .card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: ${font_ubuntu};
+        background-color: ${backgroundWhite};
+        border: 2px solid ${borderGrey};
+        box-shadow: 0 1px 2px rgba(34,25,25,0.4);
+        width: 300px;
+        height: 280px;
+        padding: 1em;
+      }
+
+`
+
+  
+// HTML -- just a example 
+  var el = bel`
+  
+
+          <div class=${css.card} >
+            example
+          </div>
+
+    
+  `
+  
+
+document.body.appendChild(el)
+   
+   
+   
+   
+    </script>
+  </body>
+</html>
